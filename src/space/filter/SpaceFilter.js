@@ -1,10 +1,12 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import './SpaceFilter.css';
 
 const initialState = {
   selectedYear: null,
   selectedLaunch: null,
-  selectedLanding: null,
+  selectedLanding: null
 };
 
 const SpaceFilter = (props) => {
@@ -54,9 +56,9 @@ const SpaceFilter = (props) => {
   };
 
   useEffect(() => {
-    const years = [];
-    for (let year = 2006; year <= 2020; year++) {
-      years.push(year);
+    const YEARS = [];
+    for (let year = 2006; year <= 2020; year += 1) {
+      YEARS.push(year);
     }
     setYears(years);
   }, []);
@@ -65,8 +67,8 @@ const SpaceFilter = (props) => {
       <div className='filter-heading'>Filters </div>
       <div className='sub-heading'>Launch Year </div>
       <div className='years-button'>
-        {years &&
-          years.map((year) => {
+        {years
+          && years.map((year) => {
             const active = year === filters.selectedYear ? 'active' : '';
             return (
               <button
@@ -107,7 +109,7 @@ const SpaceFilter = (props) => {
       </div>
 
       <div className='successful-landing'>
-        <div className='sub-heading'>Successful Launch</div>
+        <div className='sub-heading'>Successful Landing</div>
         <div className='years-button'>
           <button
             type='button'
