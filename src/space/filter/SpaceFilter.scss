@@ -1,0 +1,147 @@
+@import '../styles/variable';
+
+.space-filter {
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  width: 20%;
+  height: max-content;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: $max-width-mobile) {
+    max-width: 700px;
+    width: 100%;
+
+    .filter-heading {
+      font-weight: bold;
+      font-size: 18px;
+      padding-left: 5px;
+      position: absolute;
+    }
+
+    .sub-heading {
+      text-align: center;
+      font-size: 15px;
+      border-bottom: 1px solid black;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      padding-top: 20px;
+      border-bottom: 1px solid black;
+    }
+
+    .btn-year {
+      background-color: $light-green;
+      border-radius: 4px;
+      color: black;
+      width: 24%;
+      padding: 11px;
+      margin: 2% 13%;
+      border: none;
+      outline: none;
+      cursor: hand;
+      font-size: 15px;
+
+      &.active {
+        background-color: $dark-green;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: $max-width-mobile) and (max-width: $min-width-desktop) {
+    width: 30%;
+  }
+
+  .filter-header {
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+  }
+
+  .sub-heading {
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+  }
+
+  .years-button {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    .btn-year {
+      background-color: $light-green;
+      border-radius: 4px;
+      color: black;
+      width: 24%;
+      padding: 11px 5px;
+      margin: 2% 13%;
+      border: none;
+      outline: none;
+      cursor: hand;
+      font-size: 15px;
+
+      &.active {
+        background-color: $dark-green;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+  }
+
+  .successful-launch {
+    .btn-launch {
+      background-color: $light-green;
+      border-radius: 4px;
+      color: black;
+      width: 24%;
+      padding: 11px 5px;
+      margin: 2% 13%;
+      border: none;
+      outline: none;
+      cursor: hand;
+      font-size: 15px;
+
+      &.active {
+        background-color: $dark-green;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+  }
+
+  .successful-landing {
+    .btn-landing {
+      background-color: $light-green;
+      border-radius: 4px;
+      color: black;
+      width: 24%;
+      padding: 11px 5px;
+      margin: 2% 13%;
+      border: none;
+      outline: none;
+      cursor: hand;
+      font-size: 15px;
+
+      &.active {
+        background-color: $dark-green;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+      }
+    }
+  }
+}

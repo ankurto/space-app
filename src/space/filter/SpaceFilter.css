@@ -1,0 +1,113 @@
+.space-filter {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  width: 20%;
+  height: max-content;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 700px) {
+    .space-filter {
+      max-width: 700px;
+      width: 100%; }
+      .space-filter .filter-heading {
+        font-weight: bold;
+        font-size: 18px;
+        padding-left: 5px;
+        position: absolute; }
+      .space-filter .sub-heading {
+        text-align: center;
+        font-size: 15px;
+        border-bottom: 1px solid black;
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 20px;
+        border-bottom: 1px solid black; }
+      .space-filter .btn-year {
+        background-color: #5df17e8c;
+        border-radius: 4px;
+        color: black;
+        width: 24%;
+        padding: 11px;
+        margin: 2% 13%;
+        border: none;
+        outline: none;
+        cursor: hand;
+        font-size: 15px; }
+        .space-filter .btn-year.active {
+          background-color: #16ab37fc;
+          border: none;
+          border-radius: 4px;
+          outline: none; } }
+  @media screen and (min-width: 700px) and (max-width: 1024px) {
+    .space-filter {
+      width: 30%; } }
+  .space-filter .filter-header {
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute; }
+  .space-filter .sub-heading {
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 1px solid black; }
+  .space-filter .years-button {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0; }
+    .space-filter .years-button .btn-year {
+      background-color: #5df17e8c;
+      border-radius: 4px;
+      color: black;
+      width: 24%;
+      padding: 11px 5px;
+      margin: 2% 13%;
+      border: none;
+      outline: none;
+      cursor: hand;
+      font-size: 15px; }
+      .space-filter .years-button .btn-year.active {
+        background-color: #16ab37fc;
+        border: none;
+        border-radius: 4px;
+        outline: none; }
+  .space-filter .successful-launch .btn-launch {
+    background-color: #5df17e8c;
+    border-radius: 4px;
+    color: black;
+    width: 24%;
+    padding: 11px 5px;
+    margin: 2% 13%;
+    border: none;
+    outline: none;
+    cursor: hand;
+    font-size: 15px; }
+    .space-filter .successful-launch .btn-launch.active {
+      background-color: #16ab37fc;
+      border: none;
+      border-radius: 4px;
+      outline: none; }
+  .space-filter .successful-landing .btn-landing {
+    background-color: #5df17e8c;
+    border-radius: 4px;
+    color: black;
+    width: 24%;
+    padding: 11px 5px;
+    margin: 2% 13%;
+    border: none;
+    outline: none;
+    cursor: hand;
+    font-size: 15px; }
+    .space-filter .successful-landing .btn-landing.active {
+      background-color: #16ab37fc;
+      border: none;
+      border-radius: 4px;
+      outline: none; }
