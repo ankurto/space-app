@@ -60,7 +60,7 @@ const SpaceFilter = (props) => {
     for (let year = 2006; year <= 2020; year += 1) {
       YEARS.push(year);
     }
-    setYears(years);
+    setYears(YEARS);
   }, []);
   return (
     <div className='space-filter'>

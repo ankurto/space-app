@@ -44,7 +44,7 @@
   @media screen and (min-width: 700px) and (max-width: 1024px) {
     .space-filter {
       width: 30%; } }
-  .space-filter .filter-header {
+  .space-filter .filter-heading {
     padding-left: 5px;
     font-weight: bold;
     font-size: 18px;
