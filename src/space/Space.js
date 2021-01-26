@@ -5,6 +5,7 @@ import './Space.css';
 
 const Space = () => {
   const [spacesData, setSpacesData] = useState([]);
+  const [landingButton, setLandingButton] = useState(null);
   const getData = (url) => {
     fetch(url)
       .then((response) => response.json())
@@ -14,7 +15,14 @@ const Space = () => {
   const renderSpaceCard = (data) => (
     <div className='space-view'>
       {data
-          && data.map((card) => (
+        && data.map((card) => {
+          const landingSuccess = card
+            && card.rocket
+            && card.rocket.first_stage
+            && card.rocket.first_stage.cores[0]
+            && card.rocket.first_stage.cores[0].land_success;
+
+          const cardDetails = (
             <div
               className='space-program-name'
               key={card && card.launch_date_local}
@@ -29,10 +37,12 @@ const Space = () => {
                   {' '}
                 </div>
                 {card && card.mission_id && card.mission_id.length > 0 && (
-                <div className='mission-id'>
-                  <span className='label'>Mission Id: </span>
-                  {card.mission_id.map((id) => <li key={id}>{id}</li>)}
-                </div>
+                  <div className='mission-id'>
+                    <span className='label'>Mission Id: </span>
+                    {card.mission_id.map((id) => (
+                      <li key={id}>{id}</li>
+                    ))}
+                  </div>
                 )}
                 <div className='mission-name'>
                   <span className='label'>Launch Year: </span>
@@ -44,15 +54,18 @@ const Space = () => {
                 </div>
                 <div className='mission-name'>
                   <span className='label'>Sucessful Landing: </span>
-                  <span className='val'>{`${card.mission_name}`}</span>
+                  <span className='val'>{`${landingSuccess}`}</span>
                 </div>
               </div>
             </div>
-          ))}
+          );
+          return (landingButton !== null ? (landingSuccess !== null ? '' : cardDetails) : cardDetails);
+        })}
     </div>
   );
 
   const handleFilter = (year, selectedLaunch, selectedLanding) => {
+    setLandingButton(landingButton);
     let url = 'https://api.spacexdata.com/v3/launches?limit=100';
 
     if (year !== null) url += `&launch_year=${year}`;

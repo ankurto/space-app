@@ -4,3 +4,10 @@ $light-green: #5df17e8c;
 $max-width-mobile: 700px;
 $light-grey: #eaeaea;
 $min-width-desktop: 1024px;
+
+@mixin button-active-state {
+  background-color: $dark-green;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
